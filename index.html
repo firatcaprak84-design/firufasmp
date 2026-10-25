@@ -1,0 +1,43 @@
+
+<
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FirufaSMP | Minecraft Sunucusu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <main>
+
+        <p>✦ MINECRAFT SURVIVAL SUNUCUSU</p>
+        <h1>Firufa<span style="color: #79e36d;">SMP</span></h1>
+        <p>Yeni maceran burada başlıyor!</p>
+
+        <div class="server-card">
+            <p>JAVA EDITION</p>
+            <h2>vivo-digital.tun.ply.gg:25565</h2>
+            <button id="copy-ip">IP ADRESİNİ KOPYALA</button>
+            <p id="copy-message"></p>
+        </div>
+    </main>
+
+    <script>
+        const ip = "vivo-digital.tun.ply.gg:25565";
+
+        document.getElementById("copy-ip").addEventListener("click", async () => {
+            try {
+                await navigator.clipboard.writeText(ip);
+                document.getElementById("copy-message").textContent = "IP kopyalandı!";
+            } catch {
+                document.getElementById("copy-message").textContent =
+                    "IP adresi: " + ip;
+            }
+        });
+    </script>
+</body>
+</html>
+
